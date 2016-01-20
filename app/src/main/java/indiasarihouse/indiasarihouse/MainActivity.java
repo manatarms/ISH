@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         progressBar = (ProgressBar) findViewById(R.id.ProgressBar);
         progressBar.setMax(100);
-
-
         // Get Web view
         mWebView = (WebView) findViewById( R.id.webView ); //This is the id you gave
         mWebView.setWebViewClient(new WebViewClientDemo());
@@ -54,12 +52,8 @@ public class MainActivity extends AppCompatActivity {
                     .show();
         }
 
-        //mWebView.getSettings().setSupportZoom(true);		 //Zoom Control on web (You don't need this
-        //if ROM supports Multi-Touch
-       // mWebView.getSettings().setBuiltInZoomControls(true); //Enable Multitouch if supported by ROM
 
-        // Load URL
-    }//onCreate
+    }//End onCreate
 
     public static boolean isNetworkStatusAvialable (Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -2,4 +2,7 @@
     <string name="app_name">India Sari House</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="dialog_message">No Active Internet Connection. Please connect and retry.</string>
+    <string name="dialog_title">No connection</string>
+    <string name="retry">Retry</string>
 </resources>

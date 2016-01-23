@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    //WebView client
     private class WebViewClientDemo extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {

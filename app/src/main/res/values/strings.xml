@@ -5,4 +5,5 @@
     <string name="dialog_message">No Active Internet Connection. Please connect and retry.</string>
     <string name="dialog_title">No connection</string>
     <string name="retry">Retry</string>
+    <string name="exit_settings">Exit</string>
 </resources>

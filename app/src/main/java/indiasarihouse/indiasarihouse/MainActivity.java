@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceError;
@@ -22,6 +24,7 @@ import android.widget.ProgressBar;
 public class MainActivity extends AppCompatActivity {
     private WebView mWebView;
     private ProgressBar progressBar;
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     //initialize webview and progress bar
@@ -31,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.ProgressBar);
         progressBar.setMax(100);
         // Get Web view
-        mWebView = (WebView) findViewById( R.id.webView ); //This is the id you gave
+        mWebView = (WebView) findViewById(R.id.webView); //This is the id you gave
         mWebView.setWebViewClient(new WebViewClientDemo());
         mWebView.setWebChromeClient(new WebChromeClientDemo());
         mWebView.getSettings().setJavaScriptEnabled(true);
         //Check for connectivity
-        if(isNetworkStatusAvialable(getApplicationContext())) {
+        if (isNetworkStatusAvialable(getApplicationContext())) {
             mWebView.loadUrl("http://www.indiasarihouse.com");
         } else {
             new AlertDialog.Builder(MainActivity.this)
@@ -49,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
                     })
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-        }
+                }
+
+        }    //End onCreate
 
 
-    }//End onCreate
 
     public static boolean isNetworkStatusAvialable (Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -120,6 +124,27 @@ public class MainActivity extends AppCompatActivity {
             }
 
     }
+    //Builtin methods
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                finish();
+                System.exit(0);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     //Handle navigation
     @Override
@@ -128,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
             mWebView.goBack();
             return true;
         }
-        else {
-            finish();
-        }
         return super.onKeyDown(keyCode, event);
+
     }
+
+
 
 }
 

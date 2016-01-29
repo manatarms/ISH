@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="indiasarihouse.indiasarihouse" >
+    package="in.isabelinc.indiasarihouse" >
 
     <!--Parse-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,8 +15,8 @@
       to match your app's package name + ".permission.C2D_MESSAGE".
     -->
     <permission android:protectionLevel="signature"
-        android:name="indiasarihouse.indiasarihouse.permission.C2D_MESSAGE" />
-    <uses-permission android:name="indiasarihouse.indiasarihouse.permission.C2D_MESSAGE" />
+        android:name="in.isabelinc.indiasarihouse.permission.C2D_MESSAGE" />
+    <uses-permission android:name="in.isabelinc.indiasarihouse.permission.C2D_MESSAGE" />
     <!--Parse-->
 
     <application
@@ -64,7 +64,7 @@
                 <!--
                   IMPORTANT: Change "com.parse.starter" to match your app's package name.
                 -->
-                <category android:name="indiasarihouse.indiasarihouse" />
+                <category android:name="in.isabelinc.indiasarihouse" />
             </intent-filter>
         </receiver>
         <!--Parse-->

@@ -1,4 +1,4 @@
-package indiasarihouse.indiasarihouse;
+package in.isabelinc.indiasarihouse;
 
 import android.content.Intent;
 import android.os.Bundle;
